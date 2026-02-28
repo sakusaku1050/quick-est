@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>QUICK-EST</title>
+
+    <style>
+
+        body { margin: 0; font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #f4f4f4; color: #333; }
+
+        .header { background-color: #C5A059; color: white; padding: 20px; text-align: center; }
+
+        .header h1 { margin: 0; font-size: 2.5em; }
+
+        .header p { margin: 5px 0 0; font-size: 1.2em; font-weight: 300; }
+
+        .container { display: flex; padding: 20px; }
+
+        .sidebar { width: 250px; background-color: white; padding: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+
+        .sidebar h3 { margin-top: 0; border-bottom: 2px solid #C5A059; padding-bottom: 10px; }
+
+        .sidebar ul { list-style: none; padding: 0; margin: 0; }
+
+        .sidebar li { margin: 15px 0; }
+
+        .sidebar a { text-decoration: none; color: #333; font-weight: bold; display: block; }
+
+        .sidebar span { display: block; font-size: 0.85em; color: #666; font-weight: normal; margin-top: 2px; }
+
+        .main-content { flex: 1; margin-left: 20px; }
+
+        .news-area { background-color: white; padding: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+
+        .news-area h2 { margin-top: 0; }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="header">
+
+        <h1>QUICK-EST</h1>
+
+        <p>5分で教養を学び、豊かな人生を</p>
+
+    </div>
+
+    
+
+    <div class="container">
+
+        <div class="sidebar">
+
+            <h3>カテゴリー</h3>
+
+            <ul>
+
+                <li><a href="category/dokukai/index.html">読解</a><span> - 古典の言葉にふれ、人間を理解する</span></li>
+
+                <li><a href="category/senryaku/index.html">戦略</a><span> - 歴史に学び、戦略的思考を磨く</span></li>
+
+                <li><a href="category/shuyo/index.html">修養</a><span> - 心と体を調え、己を成長させる</span></li>
+
+                <li><a href="category/jodo/index.html">情動</a><span> - 物語から心を動かし、共感を育む</span></li>
+
+                <li><a href="category/daha/index.html">打破</a><span> - 過去の知恵で、現状を打破する</span></li>
+
+            </ul>
+
+        </div>
+
+        
+
+        <div class="main-content">
+
+        <div class="news-area">
+
+    <h2>新着記事</h2>
+
+
+
+    {% for post in site.posts %}
+
+        <div style="margin-bottom: 20px; padding: 15px; border-bottom: 1px solid #eee; background-color: #fff; border-radius: 5px;">
+
+            <h3 style="margin: 0 0 5px 0;"><a href="{{ site.baseurl }}{{ post.url }}" style="color: #333; text-decoration: none;">{{ post.title }}</a></h3>
+
+            <p style="margin: 0; font-size: 0.9em; color: #666;">{{ post.date | date: "%Y/%m/%d" }}</p>
+
+        </div>
+
+    {% endfor %}
+
+    </div>
+
+                
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
