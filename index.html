@@ -2,6 +2,9 @@
 layout: default
 ---
 <style>
+    /* 左上のリポジトリ名を非表示にする */
+    .site-title { display: none; }
+
     body { margin: 0; font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #f4f4f4; color: #333; }
     .header { background-color: #C5A059; color: white; padding: 20px; text-align: center; }
     .header h1 { margin: 0; font-size: 2.5em; }
@@ -37,13 +40,10 @@ layout: default
 
     <div class="main-content">
         <div class="news-area">
-            <h2>新着記事</h2>
-            {% for post in site.posts %}
-                <div style="margin-bottom: 20px; padding: 15px; border-bottom: 1px solid #eee; background-color: #fff; border-radius: 5px;">
-                    <h3 style="margin: 0 0 5px 0;"><a href="{{ site.baseurl }}{{ post.url }}" style="color: #333; text-decoration: none;">{{ post.title }}</a></h3>
-                    <p style="margin: 0; font-size: 0.9em; color: #666;">{{ post.date | date: "%Y/%m/%d" }}</p>
-                </div>
-            {% endfor %}
+         <h2>新着記事</h2>
+<ul>
+  <li><a href="/URL_OF_NEW_POST">新しい記事のタイトル</a> - 2026-03-01</li>
+</ul>
         </div>
     </div>
 </div>
