@@ -1,3 +1,5 @@
 title: QUICK-EST
 description: 5分で教養を学び、豊かな人生を
 theme: jekyll-theme-primer
+include:
+  - .html
